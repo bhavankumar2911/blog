@@ -1,4 +1,24 @@
 baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+languageCode = 'en-us'
+title = 'Bhavan'
 theme = "papermod"
+
+[params]
+  description = "Where AI and the math that makes it work are explained!"
+  defaultTheme = "auto"         # auto = respects system preference
+  disableThemeToggle = false    # show dark/light toggle
+  ShowReadingTime = true
+  ShowToc = true
+  TocOpen = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]  # JSON needed for search
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = ["title", "permalink", "summary", "content"]
